@@ -6,6 +6,7 @@ import "aos/dist/aos.css";
 import Navbar from "@/components/layout/Navbar";
 import AOSProvider from "@/components/AOSProvider";
 import LocalBusinessSchema from "@/components/LocalBusinessSchema";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const manrope = Manrope({
   subsets: ["latin"],
@@ -116,11 +117,13 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${manrope.variable} ${inter.variable}`}>
-        <LocalBusinessSchema />
-        <AOSProvider />
-        <Navbar />
-        <main>{children}</main>
-      </body>
+  <LocalBusinessSchema />
+  <AOSProvider />
+  <Navbar />
+  <main>{children}</main>
+
+  <GoogleAnalytics gaId="G-44WKQHXHSQ" />
+</body>
     </html>
   );
 }
