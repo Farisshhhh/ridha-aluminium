@@ -61,6 +61,10 @@ export const metadata: Metadata = {
     follow: true,
   },
 
+  verification: {
+    google: "sL-OzvWyAAKIXa0qyPzulq2kb8c2pqrIH4pQzPq1rbA",
+  },
+
   openGraph: {
     title:
       "Ridha Aluminium & Fabrications | Premium Aluminium Solutions",
@@ -112,11 +116,11 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${manrope.variable} ${inter.variable}`}>
-  <LocalBusinessSchema />
-  <AOSProvider />
-  <Navbar />
-  <main>{children}</main>
-</body>
+        <LocalBusinessSchema />
+        <AOSProvider />
+        <Navbar />
+        <main>{children}</main>
+      </body>
     </html>
   );
 }
